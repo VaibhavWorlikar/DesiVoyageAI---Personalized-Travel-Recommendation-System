@@ -1,0 +1,51 @@
+destination_id,name,culture_score,nature_score,adventure_score,relaxation_score,spiritual_score,food_score
+1,Agra,7,3,4,6,5,8
+2,Jaipur,9,5,6,7,6,9
+3,Varanasi,8,4,5,6,10,7
+4,Goa,6,9,7,10,5,9
+5,Manali,5,10,9,8,4,7
+6,Leh-Ladakh,5,10,10,7,6,6
+7,Rishikesh,7,8,10,6,9,7
+8,Kerala Backwaters,6,10,5,10,6,8
+9,Mysore,8,6,5,7,8,9
+10,Darjeeling,7,10,6,9,5,8
+11,Andaman & Nicobar,5,10,9,10,4,7
+12,Ooty,6,9,5,9,4,7
+13,Hampi,9,7,6,7,7,8
+14,Kolkata,8,6,5,7,7,10
+15,Udaipur,9,6,5,8,6,9
+16,Amritsar,8,5,4,6,10,9
+17,Shimla,6,10,6,9,5,7
+18,Coorg,6,9,6,9,5,8
+19,Jaisalmer,9,5,7,6,6,8
+20,Rann of Kutch,8,8,7,7,6,7
+21,Khajuraho,9,5,6,7,8,7
+22,Mahabalipuram,8,6,5,7,7,8
+23,Munnar,6,10,5,9,4,8
+24,Chennai,7,5,4,6,7,9
+25,Bangalore,7,5,6,6,5,9
+26,Hyderabad,8,5,5,6,7,10
+27,Pondicherry,6,7,5,9,6,8
+28,Ellora Caves,9,6,6,7,8,7
+29,Ajanta Caves,9,6,5,7,8,7
+30,Mount Abu,7,8,5,8,5,7
+31,Kodaikanal,6,9,5,9,4,8
+32,Gangtok,7,10,7,8,6,7
+33,Shillong,6,10,6,9,5,7
+34,Kaziranga,5,10,7,6,4,6
+35,Bodh Gaya,9,5,4,6,10,7
+36,Madurai,8,5,4,6,9,9
+37,Lucknow,8,5,4,6,7,10
+38,Ahmedabad,7,5,5,6,6,10
+39,Gwalior,8,6,5,7,7,8
+40,Patna,7,5,4,6,7,8
+41,Bhubaneswar,8,6,5,7,8,8
+42,Chandigarh,7,6,5,7,6,8
+43,Ranchi,6,7,6,7,6,7
+44,Puri,7,8,5,8,9,7
+45,Srinagar,7,10,7,9,5,7
+46,Alleppey,6,10,5,10,6,8
+47,Lonavala,6,9,5,8,4,7
+48,Mahabaleshwar,6,9,5,8,4,7
+49,Kanyakumari,7,7,6,8,7,8
+50,Dwarka,8,6,5,7,9,7

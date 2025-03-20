@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesiVoyageAI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DesiVoyageAI 🌍 - Personlised Travel Recommender</h1>
+            <p>Discover your perfect destination in incredible India</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'similarTab')">Find Similar Destinations</button>
+            <button class="tab-btn" onclick="openTab(event, 'preferencesTab')">Match Your Preferences</button>
+        </div>
+
+        <div id="similarTab" class="tab-content active">
+            <div class="card">
+                <h2>Find Similar Destinations</h2>
+                <p>Select a destination you've enjoyed and find similar places to explore</p>
+                
+                <div class="form-group">
+                    <label for="destinationSelect">Select a Destination:</label>
+                    <select id="destinationSelect" class="select-input">
+                        {% for dest in destinations %}
+                            <option value="{{ dest }}">{{ dest }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="numResults">Number of results:</label>
+                    <select id="numResults" class="select-input">
+                        <option value="3">3</option>
+                        <option value="5" selected>5</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                
+                <button onclick="getSimilarDestinations()" class="primary-btn">
+                    <i class="fas fa-search"></i> Find Similar
+                </button>
+            </div>
+        </div>
+
+        <div id="preferencesTab" class="tab-content">
+            <div class="card">
+                <h2>Find Places Based on Preferences</h2>
+                <p>Adjust the sliders to match your travel preferences</p>
+                
+                <div class="slider-container">
+                    <label for="culture">Culture: </label>
+                    <input type="range" id="culture" min="1" max="10" value="5" class="preference-slider">
+                </div>
+                
+                <div class="slider-container">
+                    <label for="nature">Nature: </label>
+                    <input type="range" id="nature" min="1" max="10" value="5" class="preference-slider">
+                </div>
+                
+                <div class="slider-container">
+                    <label for="adventure">Adventure: </label>
+                    <input type="range" id="adventure" min="1" max="10" value="5" class="preference-slider">
+                </div>
+                
+                <div class="slider-container">
+                    <label for="relaxation">Relaxation: </label>
+                    <input type="range" id="relaxation" min="1" max="10" value="5" class="preference-slider">
+                </div>
+                
+                <div class="slider-container">
+                    <label for="spiritual">Spiritual: </label>
+                    <input type="range" id="spiritual" min="1" max="10" value="5" class="preference-slider">
+                </div>
+                
+                <div class="slider-container">
+                    <label for="food">Food: </label>
+                    <input type="range" id="food" min="1" max="10" value="5" class="preference-slider">
+                </div>
+                
+                <div class="form-group">
+                    <label for="numResultsPref">Number of results:</label>
+                    <select id="numResultsPref" class="select-input">
+                        <option value="3">3</option>
+                        <option value="5" selected>5</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                
+                <button onclick="getRecommendations()" class="primary-btn">
+                    <i class="fas fa-compass"></i> Get Recommendations
+                </button>
+            </div>
+        </div>
+
+        <div id="loadingIndicator" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading recommendations...</p>
+        </div>
+
+        <div class="results-section">
+            <h3>Results:</h3>
+            <ul id="results" class="results-list"></ul>
+        </div>
+    </div>
+    
+    <!-- Details Modal -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="detailsContent"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Indian Travel Recommender</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            const tabButtons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
